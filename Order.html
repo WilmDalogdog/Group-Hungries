@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="viewport" content="initial-scale=1, maximum-scale=1">
+	<meta charset="UTF-8">
+	<title> Booking Form</title>
+	<link rel="stylesheet"href="will.css">
+	
+	<script>
+	function validate(){
+			if(document.getElementById('customer name').value ==""){
+				alert('Please enter your Name');
+				document.getElementById('customer name').style.borderColor="red";
+				return false;	
+			}
+			if(document.getElementById('phone number').value ==""){
+				alert('Please enter your Phone Number');
+				document.getElementById('phone number').style.borderColor="red";
+				return false;
+			}
+			if(document.getElementById('address').value ==""){
+				alert('Please enter your address');
+				document.getElementById('address').style.borderColor="red";
+				return false;
+			}
+
+			var select = document.getElementById('selection').value;
+			if(select=="select"){
+				alert("no item selected");
+				return false;
+			}
+			var select = document.getElementById('food').value;
+			if(select=="select"){
+				alert("no food selected");
+				return false;
+			}		
+
+			if(document.getElementById('date'). value ==""){
+				alert('Please enter a Date');
+				document.getElementById('date').style.borderColor="red";
+				return false;
+			}
+			if(document.getElementById('time'). value ==""){
+				alert('Please enter your Time In');
+				document.getElementById('time').style.borderColor="red";
+				return false;
+					}
+
+				{
+		alert("Form Submitted Succesfully!")
+				return false;
+
+}
+}
+
+</script>
+
+</head>
+<body>
+<form name="myform" action="" onsubmit="return validate()">
+	<div class="wrapper">
+		<center>	
+		<h2>HUNGRIES</h2>
+		<h6></h6>feeds with pleasure<br><br></center>
+		<center>
+		<h4>Order Form</h4><br>
+	</center>
+		
+		<div id="error_message"></div>
+	
+		<div class="input_field">
+			<label>Name:</label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="text" placeholder="Guest Name" id="customer name">
+			</div><br>
+			<div class="input_field">
+			<label>Phone Number:</label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="text" placeholder="Phone Number" id="phone number">
+			</div><br>
+			<div class="input_field">
+			<label>Address:</label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="text" placeholder="address" id="address">
+			</div><br>
+			<div class="input_field">
+			<center><h4>Order Details</h4><br></center>
+
+			<label>How many item:</label><center>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<select id="selection">
+			<option value="select"> Select</option>
+				<option>1 pcs </option>
+				<option>2 pcs </option>
+				<option>3 pcs </option>
+				<option>4 pcs </option>
+				<option>5 pcs  </option>
+				<option>6 pcs  </option>
+				<option>7 pcs  </option>
+				<option>8 pcs  </option>
+				<option>9 pcs </option>
+				<option>10 more</option>
+				</select><br><br></center>
+
+			<label>Order Date:</label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+			<input type="date" id="date" name="date"><br><br>
+			<label>Order Time :</label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+			<input type ="time" id= "time" name= "time"><br><br>
+			<label>Select your order:</label><center>
+			&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<select id:"food">
+			<option value="select"> Select</option>
+				<option>MANGO FLOAT</option>
+				<option>MAC & CHEESE</option>
+				<option>Moist Pure Ube Halaya</option>
+				<option>Maja Blanca</option>
+				<option>TUNA CARBONARA</option>
+				</select></center>
+		<center><br><button type="submit"> Reserve Now</button></center>
+
+		</form>
+	</div>
+</body>
+	</html>
+
+
+
+
